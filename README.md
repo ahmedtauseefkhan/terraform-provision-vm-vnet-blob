@@ -1,6 +1,8 @@
 
 **Azure Infrastructure Provisioning with CI/CD and Ansible Automation**
 
+Provision a virtual machine (VM), virtual network (VNet), and blob storage on Azure using Terraform, following best practices involves organizing your code into logical modules, using variables, output values, and resource dependencies properly
+
 **Overview**
 
 This repository contains code and automation scripts for provisioning infrastructure on Azure using **Terraform** and deploying software on the provisioned Virtual Machine (VM) using **Ansible**. The CI/CD pipeline is managed with **GitHub Actions**, automating the deployment, configuration, and teardown of resources.
