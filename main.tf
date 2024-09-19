@@ -1,11 +1,20 @@
+terraform {
+  backend "azurerm" {
+    storage_account_name = "tfstorageterraform1"  # Your storage account name
+    container_name       = "tfstate"               # Your container name
+    key                  = "terraform.tfstate"     # The name of your state file
+    # access_key is not included here
+  }
+}
+
 provider "azurerm" {
   features {}
   resource_provider_registrations = "none"
-  subscription_id = "28e1e42a-4438-4c30-9a5f-7d7b488fd883"
+  subscription_id = "2213e8b1-dbc7-4d54-8aff-b5e315df5e5b"
 }
 
 data "azurerm_resource_group" "existing" {
-  name = "1-4c963af4-playground-sandbox"
+  name = "1-9b3b79f9-playground-sandbox"
 }
 
 
