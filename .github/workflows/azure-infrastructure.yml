@@ -43,7 +43,12 @@ jobs:
           terraform_version: 1.9.5
 
       - name: Terraform Init
-        run: terraform init
+        run: |
+          terraform init \
+            -backend-config="storage_account_name=tfstorageterraform1" \
+            -backend-config="container_name=tfstate" \
+            -backend-config="key=terraform.tfstate" \
+            -backend-config="access_key=${{ secrets.AZURE_STORAGE_ACCESS_KEY }}"
 
       - name: Terraform Plan
         run: terraform plan -out=tfplan
