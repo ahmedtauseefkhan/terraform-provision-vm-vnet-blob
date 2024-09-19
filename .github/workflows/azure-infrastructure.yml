@@ -25,10 +25,6 @@ jobs:
         run: terraform init
 
       - name: Terraform Plan
-        id: plan
-        run: terraform plan -out=tfplan
-
-      - name: Terraform Plan
         run: terraform plan -out=tfplan
         env:
           AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
