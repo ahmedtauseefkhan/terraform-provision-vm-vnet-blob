@@ -2,7 +2,7 @@ resource "azurerm_public_ip" "public_ip" {
   name                = "my-public-ip"
   location            = var.location
   resource_group_name = var.resource_group_name
-  allocation_method   = "Dynamic"  # Or "Static" if needed
+  allocation_method   = "Static"  # Or "Static" if needed
 }
 
 resource "azurerm_network_interface" "nic" {
