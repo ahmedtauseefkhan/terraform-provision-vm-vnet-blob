@@ -1,0 +1,7 @@
+- hosts: 40.83.181.237
+  become: yes
+  roles:
+    - nginx
+    - docker
+    - docker_compose
+    - nginx_port
