@@ -14,7 +14,7 @@ provider "azurerm" {
 }
 
 data "azurerm_resource_group" "existing" {
-  name = "1-9b3b79f9-playground-sandbox"
+  name = "1-2e2372f3-playground-sandbox"
 }
 
 
